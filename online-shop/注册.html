@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/master.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册 - 动脑学院项目实战案例</title>
+</head>
+
+<body>
+<div class="login-head">
+	<div class="wrapper">
+		<a href="index.html"><img src="images/logo1.png"></a>
+	</div>
+</div>
+<div class="wrapper mt30">
+	<form class="member-forms" action="login.html" onsubmit="return checkForm()">
+		<div class="mf-head rel">
+			<span class="f24">新用户注册</span>
+			<span class="gray mf-head-link">已有账号？<a href="登陆.html">立即登陆</a></span>
+		</div>
+		<div class="mf-line">
+			<span class="mf-name">手机号</span>
+			<input type="text" id="username" placeholder="您的登陆手机号" class="mf-txt">
+		</div>
+		<div class="mf-line">
+			<span class="mf-name">密码</span>
+			<input type="text" id="password" placeholder="您的登陆账户密码" class="mf-txt">
+		</div>
+		<div class="mf-line">
+			<span class="mf-name">性别</span>
+			<label><input type="radio" checked name="sex" class="">男</label>
+			<label><input type="radio" name="sex" class="">女</label>
+		</div>
+		<div class="mf-line">
+			<span class="mf-name">城市</span>
+			<input type="hidden" placeholder="您的所在城市" class="mf-txt" readonly>
+			<div class="mf-txt mf-select gray">请选择您所在的城市</div>
+			<div class="select hide">
+				<a href="javascript:void(0);">北京</a>
+				<a href="javascript:void(0);">上海</a>
+				<a href="javascript:void(0);">深圳</a>
+				<a href="javascript:void(0);">长沙</a>
+			</div>
+		</div>
+		<div class="mf-line">
+			<span class="mf-name">邮箱</span>
+			<input type="text" id="email" placeholder="您的邮箱账号" class="mf-txt">
+		</div>
+		<input type="submit" id="loginBtn" class="mf-btn mt30" value="确定登陆">
+	</form>
+</div>
+<div class="footer pt20 mt30">
+	<div class="footer-trait pb20">
+		<div class="wrapper">
+			<ul>
+				<li>
+					<i class="iconfont"></i>500强企业 品质保证
+				</li>
+				<li>
+					<i class="iconfont"></i>7天退货 15天换货
+				</li>
+				<li>
+					<i class="iconfont"></i>99元起免运费
+				</li>
+				<li>
+					<i class="iconfont"></i>448家维修网点 全国联保
+				</li>
+			</ul>
+			<div class="cl"></div>
+		</div>
+	</div>
+    <div class="wrapper tc">
+		<p class="friend-link tl">友情链接：<a href="#">动脑学院</a><a href="#">腾讯课堂</a><a href="#">动脑学院</a><a href="#">腾讯课堂</a><a href="#">动脑学院</a><a href="#">腾讯课堂</a><a href="#">动脑学院</a><a href="#">腾讯课堂</a><a href="#">动脑学院</a><a href="#">腾讯课堂</a><a href="#">动脑学院</a><a href="#">腾讯课堂</a><a href="#">动脑学院</a><a href="#">腾讯课堂</a><a href="#">动脑学院</a><a href="#">腾讯课堂</a><a href="#">动脑学院</a><a href="#">腾讯课堂</a><a href="#">动脑学院</a><a href="#">腾讯课堂</a><a href="#">动脑学院</a><a href="#">腾讯课堂</a><a href="#">动脑学院</a><a href="#">腾讯课堂</a></p>
+        <p class="mt10">隐私政策 服务协议 Copyright © 2012-2016 VMALL.COM 版权所有 保留一切权利</p>
+        <p>公安备案 湘公网安备 00000000000000号 | 湘ICP备00000000号-0 | 增值电信业务经营许可证：湘A0-20161110 | 网络文化经营许可证：湘网文[2016] 0000-000号</p>
+		<p class="mt10 pb20">
+			<a href="#"><img src="images/f1.png"></a>
+			<a href="#"><img src="images/f2.png"></a>
+			<a href="#"><img src="images/f3.png"></a>
+		</p>
+    </div>
+</div>
+<script type="text/javascript" src="js/verifyForm.js"></script>
+<script type="text/javascript">
+function checkForm(){
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+	var email = document.getElementById("email").value;
+	if(verifyForm.checkPhone(username,"请正确填写手机号码") && verifyForm.checkPwd(password,"请正确填写密码") && verifyForm.checkEmail(email,"请正确填写邮箱账号")){
+		//如果判断通过，那么就执行
+		
+		return true;
+	}
+	return false;//否则不通过
+	
+}
+window.onload = function(){
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	var selectObj = document.getElementsByClassName("mf-select");
+	var selectEle = document.getElementsByClassName("select")[0].children;
+	for(var i = 0; i < selectObj.length;i++){
+		selectObj[i].onclick = function(){
+			this.nextElementSibling.className = this.nextElementSibling.className.replace("hide","").trim()
+		}
+	}
+	
+	for(var i = 0;i < selectEle.length;i++){
+		selectEle[i].onclick = function(){
+			this.parentElement.previousElementSibling.textContent = this.textContent;
+			this.parentElement.className = "select hide";
+			this.parentElement.previousElementSibling.previousElementSibling.value = this.textContent;
+		}
+	}
+	
+	
+	if(localStorage.getItem("username") && localStorage.getItem("password")){
+		//这里建议不要写相对的
+		/*
+			1、网站如果更改目录，我们还是不需要修改
+			2、容易搬迁
+		*/
+		verifyForm.tips("对不起，您已登陆");
+		window.location.href = "/dn/project/index.html";
+	}
+	
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
