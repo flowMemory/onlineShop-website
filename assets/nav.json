@@ -1,0 +1,13 @@
+{
+	"message":"加载成功",
+	"success":true,
+	"data":[
+		{"type":"Iphone","url":"http://www.dongnaoedu.com","subItem":["华为Meta9","OPPO R9"]},
+		{"type":"华为","url":"http://www.dongnaoedu.com","subItem":["华为Meta9","OPPO R9"]},
+		{"type":"魅族","url":"http://www.dongnaoedu.com","subItem":["华为Meta9","OPPO R9"]},
+		{"type":"Iphone","url":"http://www.dongnaoedu.com","subItem":["华为Meta9","OPPO R9"]},
+		{"type":"Iphone","url":"http://www.dongnaoedu.com","subItem":["华为Meta9","OPPO R9"]}
+	
+	]
+	
+}
